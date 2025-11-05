@@ -8,7 +8,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// +kubebuilder:validation:Enum=Datastore;Other
+// +kubebuilder:validation:Enum=Datastore;Storagepolicy;Other
 
 // StorageBackingType is a constant type that indicates the type of the storage
 // backing for a content library in vCenter.
@@ -18,6 +18,10 @@ const (
 	// StorageBackingTypeDatastore indicates a content library backed by a
 	// datastore.
 	StorageBackingTypeDatastore StorageBackingType = "Datastore"
+	
+	// StorageBackingTypeStoragePolicy indicates a content library backed by a
+	// Storagepolicy.
+	StorageBackingTypeStoragePolicy StorageBackingType = "Storagepolicy"
 
 	// StorageBackingTypeOther indicates a content library backed by an NFS or
 	// SMB file system.

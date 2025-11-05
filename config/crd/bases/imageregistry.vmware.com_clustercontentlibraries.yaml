@@ -452,11 +452,17 @@ spec:
                         DatastoreID indicates the identifier of the datastore used to store the
                         content in the library for the "Datastore" storageType in vCenter.
                       type: string
+                    storagePolicyID:
+                      description: |-
+                        StoragePolicyID indicates the identifier of the storage policy used to store the
+                        content in the library for the "Storagepolicy" storageType in vCenter.
+                      type: string
                     type:
                       description: Type indicates the type of storage where the content
                         would be stored.
                       enum:
                       - Datastore
+                      - Storagepolicy
                       - Other
                       type: string
                   required:
